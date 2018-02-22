@@ -1,0 +1,30 @@
+{
+  "name": "fixquick",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-react": "^6.23.0",
+    "babelify": "^7.3.0",
+    "bootstrap": "^3.3.7",
+    "browserify": "^14.1.0",
+    "chart.js": "^2.5.0",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
+    "watchify": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "reactwatch": "watchify assets/js/react_me.jsx -t [ babelify --presets [react] ] -o app/modules.js",
+    "watch_popular_items": "watchify myfixquick/popular_items.jsx -t [ babelify --presets [react] ] -o myfixquick/components/myfixquck_app.js",
+    "watch": "watchify assets/js/scripts.js -o app/app.js",
+    "build": "browserify assets/js/scripts.js -o app/app.js",
+    "buildify": "browserify assets/js/react_me.jsx -t [ babelify --presets [react] ] -o app/modules.js"
+  },
+  "author": "brandon osuji",
+  "license": "ISC"
+}
